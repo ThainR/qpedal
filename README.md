@@ -17,7 +17,7 @@ then run it to see what it looks like
 ### `npm start`
 
 Thankx :) 
-Everything below is the readme created by creat-react-app (what i used to set up the project)
+Everything below is the readme created by create-react-app (what i used to set up the project)
 
 -------------------------------------------------------------------------------------------
 
