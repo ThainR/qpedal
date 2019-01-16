@@ -1,3 +1,28 @@
+HELLO FRIENDS
+
+to download and run this, clone it
+
+### `git clone PROJECT LINK`
+
+then enter the project folder
+
+### `cd qpedal`
+
+then install dependencies (found in package.json)
+
+### `npm i`
+
+then run it to see what it looks like
+
+### `npm start`
+
+Thankx :) 
+Everything below is the readme created by creat-react-app (what i used to set up the project)
+
+-------------------------------------------------------------------------------------------
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
