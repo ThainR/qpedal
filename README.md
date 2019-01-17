@@ -1,3 +1,29 @@
+HELLO FRIENDS
+
+to download and run this, clone it
+
+### `git clone PROJECT LINK`
+
+then enter the project folder
+
+### `cd qpedal`
+
+then install dependencies (found in package.json)
+
+### `npm i`
+
+then run it to see what it looks like
+
+### `npm start`
+
+NEVER push straight to master pls - create your own branch x
+https://www.freecodecamp.org/forum/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222
+
+Thankx :) Everything below is the readme created by create-react-app (what i used to set up the project)
+
+---------------------------------------------------------------------------------------------------
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
