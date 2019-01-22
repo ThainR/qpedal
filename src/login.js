@@ -62,7 +62,7 @@ class Login extends Component {
             />
           </Form.Field>
 
-          <button class="ui Button" onClick={this.login}>Login</button>
+          <Button class="ui Button" onClick={this.login}>Login</Button>
         </Form>
 
     );
