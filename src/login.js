@@ -28,6 +28,13 @@ class Login extends Component {
   			if(firebaseUser){
   				console.log(firebaseUser);
   				//window.location.href = 'index.html'
+            var user =	firebase.auth().currentUser;
+          if(user.emailVerified){
+            	console.log("verified");
+
+          }else{
+              alert("Please verify your email");
+          }
   			}else{
   				console.log('not loged in');
 

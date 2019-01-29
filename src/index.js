@@ -20,7 +20,7 @@ var config = {
 
 
 
-ReactDOM.render(<Register/>, document.getElementById('root'));
+ReactDOM.render(<Login/>, document.getElementById('root'));
 
 
 
