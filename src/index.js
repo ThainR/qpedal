@@ -4,9 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
-import Register from './register';
-import Login from './login';
-import Logout from './logout';
 
 var config = {
 	apiKey: "AIzaSyCF4Zj0RDr0SaG912XgXrkSzCfirmvS6kE",
@@ -20,7 +17,7 @@ var config = {
 
 
 
-ReactDOM.render(<Register/>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 
 

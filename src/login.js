@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import * as firebase from 'firebase';
+import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import Home from "./Home.js";
 
 
 class Login extends Component {
@@ -56,28 +58,33 @@ class Login extends Component {
   render() {
 
     return (
-
-        <Form>
-          <Form.Field>
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Please enter email"
-            value={ this.state.email }
-            onChange={ this.handleChange }
-            />
+      <Router>
+          <Form>
+            <Form.Field>
+              <label>Email</label>
+              <input type="email" name="email" placeholder="Please enter email"
+              value={ this.state.email }
+              onChange={ this.handleChange }
+              />
+              </Form.Field>
+            <Form.Field>
+              <label>Password</label>
+              <input type="password" name="pass" placeholder="Please enter password"
+              value={ this.state.pass }
+              onChange={ this.handleChange }
+              />
             </Form.Field>
-          <Form.Field>
-            <label>Password</label>
-            <input type="password" name="pass" placeholder="Please enter password"
-            value={ this.state.pass }
-            onChange={ this.handleChange }
-            />
-          </Form.Field>
 
-          <Button class="ui Button" onClick={this.login}>Login</Button>
-        </Form>
 
+            <button class="ui Button" onClick={this.login}>
+              <Link style={{display: 'block', height: '100%'}} onClick={this.login} to="/home">Login</Link>
+            </button>
+
+
+          </Form>
+        </Router>
     );
   }
 }
 
-export default Login;
+export default withRouter(Login);

@@ -4,28 +4,17 @@ import './App.css';
 import ButtonExampleButton from './Btn.js'
 import Nav from './Nav.js'
 import Login from './Login.js'
-import Home from './Home.js'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <div>
-          <Login/>
-
-            <hr />
-
-            <Route path="/home" exact component={Home} />
-
-
-          </div>
-        </Router>
-    </div>
+        <h1>Heyyy</h1>
+      </div>
     );
   }
 }
 
-export default App;
+export default Home;
