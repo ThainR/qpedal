@@ -5,25 +5,25 @@ import ButtonExampleButton from './Btn.js'
 import Nav from './Nav.js'
 import Login from './Login.js'
 import Home from './Home.js'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Map from './Map.js'
+import Account from './Account.js'
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Router>
-          <div>
-          <Login/>
+      <BrowserRouter>
+          <div className="App"></div>
 
-            <hr />
-
-            <Route path="/home" exact component={Home} />
-
-
+            <div>
+              <Route path="/login" exact component={Login} />
+              <Route path="/home" exact component={Home} />
+              <Route path="/map" exact component={Map} />
+              <Route path="/account" exact component={Account} />
+            </div>
           </div>
-        </Router>
-    </div>
+      </BrowserRouter>
     );
   }
 }

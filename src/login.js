@@ -58,7 +58,7 @@ class Login extends Component {
   render() {
 
     return (
-      <Router>
+
           <Form>
             <Form.Field>
               <label>Email</label>
@@ -75,14 +75,15 @@ class Login extends Component {
               />
             </Form.Field>
 
-
+            <Button>
+              <Link style={{display: 'block', height: '100%'}} to="/home">Login</Link>
+            </Button>
             <button class="ui Button" onClick={this.login}>
               <Link style={{display: 'block', height: '100%'}} onClick={this.login} to="/home">Login</Link>
             </button>
 
 
           </Form>
-        </Router>
     );
   }
 }
