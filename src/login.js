@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import * as firebase from 'firebase';
@@ -16,30 +17,40 @@ class Login extends Component {
   this.handleChange = this.handleChange.bind(this);
 }
 
-    login(){
+  login(){
 
 
-      const auth = firebase.auth();
+    const auth = firebase.auth();
 
-  	const promise = auth.signInWithEmailAndPassword(this.state.email,this.state.pass);
-  	promise.catch(e => console.log(e.message));
-  	firebase.auth().onAuthStateChanged(firebaseUser => {
+    const promise = auth.signInWithEmailAndPassword(this.state.email,this.state.pass);
+    promise.catch(e => console.log(e.message));
+    firebase.auth().onAuthStateChanged(firebaseUser => {
 
-  			if(firebaseUser){
-  				console.log(firebaseUser);
-  				//window.location.href = 'index.html'
-  			}else{
-  				console.log('not loged in');
+      if(firebaseUser){
+        console.log(firebaseUser);
+        //window.location.href = 'index.html'
+        var user =	firebase.auth().currentUser;
+        if(user.emailVerified){
+          	console.log("verified");
 
-  			}
+        }else{
+            firebase.auth().signOut();
+            alert("Please verify your email");
 
-  	});
-  }
+        }
+      }else{
+        console.log('not loged in');
+
+      }
+
+    });
+      }
+
   handleChange({ target }) {
-      this.setState({
-        [target.name]: target.value
-      });
-    }
+  this.setState({
+  [target.name]: target.value
+  });
+}
 
 
   render() {
@@ -62,7 +73,7 @@ class Login extends Component {
             />
           </Form.Field>
 
-          <button class="ui Button" onClick={this.login}>Login</button>
+          <Button class="ui Button" onClick={this.login}>Login</Button>
         </Form>
 
     );
