@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ButtonExampleButton from './Btn.js'
 import Nav from './Nav.js'
-import Login from './Login.js'
+import Login from './login.js'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Button} from "semantic-ui-react";
 
