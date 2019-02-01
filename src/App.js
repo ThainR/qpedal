@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ButtonExampleButton from './Btn.js'
 import Nav from './Nav.js'
-import Login from './Login.js'
+import Login from './login.js'
 import Home from './Home.js'
 import Map from './Map.js'
 import Account from './Account.js'
