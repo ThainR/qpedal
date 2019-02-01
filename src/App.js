@@ -22,7 +22,7 @@ class App extends Component {
               <Route path="/map" exact component={Map} />
               <Route path="/account" exact component={Account} />
             </div>
-          </div>
+        
       </BrowserRouter>
     );
   }
